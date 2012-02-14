@@ -41,5 +41,12 @@ group :development, :test do
   gem 'spork'
   gem 'guard-rspec'
   gem 'guard-spork'
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'guard-cucumber'
+  gem 'passenger'
+  gem 'guard-passenger'
 end
 gem 'therubyracer'
+gem 'omniauth-twitter'
