@@ -50,3 +50,5 @@ group :development, :test do
 end
 gem 'therubyracer'
 gem 'omniauth-twitter'
+gem 'inherited_resources'
+gem 'simple_form'

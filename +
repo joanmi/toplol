@@ -1,6 +1,21 @@
-Toplol::Application.routes.draw do
-  get "welcome/index"
-  get "/auth/twitter/callback" => "sessions#create"
-  get '/logout' => "sessions#destroy"
-  root :to => "welcome#index"
+When /^I go to champions page$/ do
+  visit '/champions'
 end
+
+When /^I create a new champion called "([^"]*)"$/ do |champion_name|
+  click_link "Add new champion"
+  fill_in "Name", :with => champion_name
+end
+
+Then /^I should see this champion on champions list$/ do
+    pending # express the regexp above with the code you wish you had
+end
+
+Given /^I have champion "([^"]*)" created$/ do |arg1|
+    pending # express the regexp above with the code you wish you had
+end
+
+Then /^I should see an error$/ do
+    pending # express the regexp above with the code you wish you had
+end
+

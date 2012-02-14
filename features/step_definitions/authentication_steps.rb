@@ -14,3 +14,7 @@ Then /^I should see my name$/ do
   page.should have_content "joanmi"
 end
 
+Given /^I am an admin$/ do
+  visit '/auth/twitter'
+end
+

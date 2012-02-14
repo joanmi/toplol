@@ -1,0 +1,7 @@
+<h1>Champion Page</h1>
+<%= link_to "Add new champion", new_champion_path %>
+<ul>
+  <% @champions.each do |champion| %>
+    <li><%= champion.name %></li>
+<% end %>
+</ul>
