@@ -10,7 +10,7 @@ Feature: admin edits existing champion
     Given I go to edit champion page
   Scenario: admin edits an existing champion
     When I edit "Katarina" name
-    Then I should see champions name updated
+    Then I should see champions name "Annie" updated
 
   Scenario: Try to edit with same attributs like other champion
     When I edit a champion called "Katarina" and called "Annie"

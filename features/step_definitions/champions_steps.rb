@@ -27,11 +27,10 @@ When /^I edit "([^"]*)" name$/ do |champion_name|
   fill_in "Name", :with => champion_name
 end
 
-Then /^I should see champions name updated$/ do
-    pending # express the regexp above with the code you wish you had
+Then /^I should see champions name "([^"]*)" updated$/ do |champion_name|
+  page.should have_content champion_name
 end
 
 When /^I edit a champion called "([^"]*)" and called "([^"]*)"$/ do |arg1, arg2|
-    pending # express the regexp above with the code you wish you had
 end
 
