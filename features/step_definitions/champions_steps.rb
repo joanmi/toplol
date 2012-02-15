@@ -13,11 +13,25 @@ Then /^I should see "([^"]*)" on champions list$/ do |champion_name|
 end
 
 Given /^I have champion "([^"]*)" created$/ do |champion_name|
-  Champion.create(:name => champion_name)
+  @champion = Champion.create(:name => champion_name)
 end
 
 Then /^I should see an error$/ do
-  save_and_open_page
   page.should have_content "Champion already exist"
+end
+Given /^I go to edit champion page$/ do
+  visit "/champions/#{@champion.id}/edit"
+end
+
+When /^I edit "([^"]*)" name$/ do |champion_name|
+  fill_in "Name", :with => champion_name
+end
+
+Then /^I should see champions name updated$/ do
+    pending # express the regexp above with the code you wish you had
+end
+
+When /^I edit a champion called "([^"]*)" and called "([^"]*)"$/ do |arg1, arg2|
+    pending # express the regexp above with the code you wish you had
 end
 

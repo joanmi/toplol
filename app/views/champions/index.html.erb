@@ -3,5 +3,6 @@
 <ul>
   <% @champions.each do |champion| %>
     <li><%= champion.name %></li>
+    <%= link_to "Edit champion", edit_champion_path %>
 <% end %>
 </ul>
